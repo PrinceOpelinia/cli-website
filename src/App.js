@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React, {useState}  from 'react';
+import './App.css';
+import Terminal from './components/Terminal';
+import './styles.css';
+import Typewriter from 'typewriter-effect';
+
+const App = () => {
+  return(
+
+    <div className='appBackground'>
+    
+    <Typewriter
+     
+     onInit={(typewriter) => {
+       typewriter.changeDeleteSpeed(1).changeDelay(10).typeString("Yo, welcome to my personal website.")
+       .pause(2000)
+       
+       .deleteAll()
+       .typeString("Type 'help' to view available commands: ")
+       .stop()
+       .start()
+       
+        
+         }}
+         />
+     
+         <Terminal/>
+
     </div>
   );
-}
+  
+ 
+};
+
 
 export default App;

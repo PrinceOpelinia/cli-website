@@ -81,10 +81,11 @@
   font-size: inherit;
   font-size: inherit;
   color: rgb(0, 0, 0);
-  background: transparent;
+  background: #c2c2c249;
   border: 0px;
   outline: none; /* no highlight on focus */
   width: 100%;
+  
 }
 
 .terminal-error-group {

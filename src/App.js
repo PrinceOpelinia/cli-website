@@ -11,24 +11,21 @@ const App = () => {
     <div className='appBackground'>
     
     <Typewriter
-     
-     onInit={(typewriter) => {
-       typewriter.changeDeleteSpeed(1).changeDelay(10).typeString("Yo, welcome to my personal website.")
-       .pause(2000)
-       
-       .deleteAll()
-       .typeString("Type 'help' to view available commands: ")
-       .stop()
-       .start()
-       
-        
-         }}
-         />
-     
-         <Terminal/>
-
+  options={{
+    deleteSpeed: 50,
+    delay: 50,
+    strings: ['Hello, welcome to my website', 'My name is Prince!','How are you doing today?'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+    <p>
+      Type 'help' to see available commands
+    </p>
+    <Terminal></Terminal>
     </div>
   );
+  
   
  
 };
